@@ -5,9 +5,10 @@ import Image from "next/image";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import img1 from "@/assets/images/img-1.jpg";
+import aboutImg from '@/assets/images/about-img.png'
 export default function Home() {
   return (
-    <main className="w-full flex flex-col">
+    <main className="w-full flex flex-col items-center bg-neutral-950">
       <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
         <div className="max-w-2xl mx-auto p-4">
           <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
@@ -15,11 +16,41 @@ export default function Home() {
           </h1>
           <p></p>
           <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-            Top Ten Fire Safety Is Leading Manufacturers Of Fire Safety Equipments
+            Top Ten Fire Safety Is Leading Manufacturers Of Fire Safety
+            Equipments
           </p>
-         
         </div>
         <BackgroundBeams />
+      </div>
+      <div className="bg-neutral-950 w-11/12 flex justify-between">
+        <div className="w-6/12 flex">
+          <Image src={aboutImg} alt="" className="h-[400px] w-[450px]" />
+        </div>
+        <div className="w-6/12">
+          <h1 className="text-4xl text-white text-center">About Us</h1>
+          <p className="text-white mt-4">
+            Top Ten Fire Safety stands as a leading force in the fire safety
+            industry with over 50 years of experience, committed to protecting
+            lives and property across the nation. As a pioneer in fire safety
+            from India, we have set the standard in the industry by constantly
+            innovating and enhancing our range of fire protection solutions.
+          </p>
+          <p className="text-white mt-4">
+            At Top Ten Fire Safety, we pride ourselves on our extensive
+            expertise in testing and manufacturing a comprehensive array of fire
+            fighting equipment and systems. Our commitment to excellence drives
+            us to continually refine our products to better serve our customers
+            and address the unique challenges they face.
+          </p>
+          <p className="text-white mt-4">
+            Our product line includes a diverse selection of Fire Extinguishers,
+            designed for various applications, Special Application
+            Extinguishers, state-of-the-art In-Panel Suppression Systems, Total
+            Flooding Systems, Wet Chemical Based Kitchen Fire Suppression
+            Systems, Hydrant Systems, and other advanced fire fighting
+            technologies.
+          </p>
+        </div>
       </div>
     </main>
   );
