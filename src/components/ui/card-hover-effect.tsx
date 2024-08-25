@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
+import { CardBody, CardContainer, CardItem } from "./3d-card";
+
 export const HoverEffect = ({
   items,
   className,
@@ -12,7 +14,7 @@ export const HoverEffect = ({
     title: string;
     description: string;
     link: string;
-    img:any,
+    img: any;
   }[];
   className?: string;
 }) => {
@@ -50,13 +52,42 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card className="group/bento">
+          {/* <Card className="group/bento">
             <Image src={item.img} alt='' className="rounded-lg"/>
             <div className="group-hover/bento:translate-x-2 transition duration-200">
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
             </div>
-          </Card>
+          </Card> */}
+
+          <CardContainer className="inter-var">
+            <CardBody className="bg-black  relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full  h-auto rounded-xl p-6 border  ">
+              <CardItem translateZ="100" className="w-full ">
+                <Image
+                  src={item.img}
+                  height="1000"
+                  width="1000"
+                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-white dark:text-white mt-4"
+              >
+                {item.title}
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-white text-sm max-w-sm mt-2 dark:text-white"
+              >
+                {item.description}{" "}
+              </CardItem>
+
+             
+            </CardBody>
+          </CardContainer>
         </Link>
       ))}
     </div>
