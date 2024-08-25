@@ -4,8 +4,9 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 import img1 from "@/assets/images/img-1.jpg";
-import aboutImg from '@/assets/images/about-img.png'
+import aboutImg from "@/assets/images/about-img.png";
 export default function Home() {
   return (
     <main className="w-full flex flex-col items-center bg-neutral-950">
@@ -52,6 +53,58 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className="w-11/12 flex flex-col items-center mt-16">
+        <h1 className="text-2xl text-white text-center">Our Services</h1>
+        <h2 className="text-white text-4xl text-center">What we do?</h2>
+        <div className="w-full mt-8">
+        <HoverEffect items={projects} />
+        </div>
+      </div>
     </main>
   );
 }
+
+export const projects = [
+  {
+    title: "Fire Extinguisher Supply",
+    description:
+      "We are the main association which gives Fire Extinguisher Refilling Services in business.",
+    link: "#",
+    img:img1
+  },
+  {
+    title: "Fire Hydrant System & AMC",
+    description:
+      "Our range of products include car fire extinguisher,and AMC of fire hydrant system.",
+    link: "#",
+    img:img1
+  },
+  {
+    title: "Fire Suppression System",
+    description:
+      "We provide Fire Suppression system across the country and even to remote location.",
+    link: "#",
+    img:img1
+  },
+  {
+    title: "Fire Audit",
+    description:
+      "Fire Audit Services executed by our team of professionals who are expertise in respective domains.",
+    link: "#",
+    img:img1
+  },
+  {
+    title: "Fire Alarm Smoke Detection Sysems",
+    description:
+      "We provide complete Smoke Detectors services from installation,testing, maintenance last 50 years.",
+    link: "#",
+    img:img1
+  },
+  {
+    title: "Fire Fighting Training",
+    description:
+      "We provide Fire Fighting training across India. This training is provided by our expertise.",
+    link: "#",
+    img:img1
+  },
+];
