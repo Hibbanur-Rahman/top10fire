@@ -15,6 +15,17 @@ import ItemImg3 from "@/assets/images/item-3.jpeg";
 import ItemImg2 from "@/assets/images/item-2.jpeg";
 import ItemImg1 from "@/assets/images/item-1.jpeg";
 import SliderComponent from "@/components/sliderComponets";
+
+import ExtinguisherItemImg1 from "@/assets/images/extinguisher-item-1.jpeg";
+import ExtinguisherItemImg2 from "@/assets/images/extinguisher-item-2.jpeg";
+import ExtinguisherItemImg3 from "@/assets/images/extinguisher-item-3.jpeg";
+import ExtinguisherItemImg4 from "@/assets/images/extinguisher-item-4.jpeg";
+import ExtinguisherItemImg5 from "@/assets/images/extinguisher-item-5.jpeg";
+import ExtinguisherItemImg6 from "@/assets/images/extinguisher-item-6.jpeg";
+import ExtinguisherItemImg7 from "@/assets/images/extinguisher-item-7.jpeg";
+import ExtinguisherItemImg8 from "@/assets/images/extinguisher-item-8.jpeg";
+import ExtinguisherItemImg9 from "@/assets/images/extinguisher-item-9.jpeg";
+import ExtinguisherItemImg10 from "@/assets/images/extinguisher-item-10.jpeg";
 export default function Home() {
   const WhatWeDo = [
     {
@@ -63,40 +74,64 @@ export default function Home() {
 
   const extinguisherItemSlides = [
     {
-      title: "Fire Extinguisher Supply",
+      title: "ABC Powder Fire Extinguishers",
       description: "",
       link: "#",
-      img: ItemImg1,
+      img: ExtinguisherItemImg1,
+    },
+    {
+      title: "BC Powder Fire Extinguisher",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg2,
+    },
+    {
+      title: "CO2 Based Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg3,
+    },
+    {
+      title: "Water Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg4,
+    },
+    {
+      title: "Clean Agent Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg5,
+    },
+    {
+      title: "Kitchen Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg6,
     },
     {
       title: "Fire Extinguisher Supply",
       description: "",
       link: "#",
-      img: ItemImg1,
+      img: ExtinguisherItemImg7,
+    },
+    {
+      title: "Automatic Modular Type Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg8,
+    },
+    {
+      title: "Foam Fire Extinguishers",
+      description: "",
+      link: "#",
+      img: ExtinguisherItemImg9,
     },
     {
       title: "Fire Extinguisher Supply",
       description: "",
       link: "#",
-      img: ItemImg1,
-    },
-    {
-      title: "Fire Extinguisher Supply",
-      description: "",
-      link: "#",
-      img: ItemImg1,
-    },
-    {
-      title: "Fire Extinguisher Supply",
-      description: "",
-      link: "#",
-      img: ItemImg1,
-    },
-    {
-      title: "Fire Extinguisher Supply",
-      description: "",
-      link: "#",
-      img: ItemImg1,
+      img: ExtinguisherItemImg10,
     },
   ];
   return (
@@ -156,7 +191,41 @@ export default function Home() {
           Products You May Love
         </h1>
         <h2 className="text-white text-4xl text-center">Fire Extinguisers</h2>
-        <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        <div className="w-full mt-16">
+          <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        </div>
+      </div>
+      <div className="w-11/12 flex flex-col items-center mt-16">
+        <h1 className="text-3xl text-white text-center">
+          Fire Suppression System
+        </h1>
+        <div className="w-full mt-16">
+          <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        </div>
+      </div>
+      <div className="w-11/12 flex flex-col items-center mt-16">
+        <h1 className="text-3xl text-white text-center">
+          Fire Hydrant Accessories
+        </h1>
+        <div className="w-full mt-16">
+          <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        </div>
+      </div>
+      <div className="w-11/12 flex flex-col items-center mt-16">
+        <h1 className="text-3xl text-white text-center">
+          Fire Alarm System / Signage
+        </h1>
+        <div className="w-full mt-16">
+          <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        </div>
+      </div>
+      <div className="w-11/12 flex flex-col items-center mt-16">
+        <h1 className="text-3xl text-white text-center">
+          Fire Extinguisers Spare Parts
+        </h1>
+        <div className="w-full mt-16">
+          <SliderComponent items={extinguisherItemSlides}></SliderComponent>
+        </div>
       </div>
     </main>
   );
