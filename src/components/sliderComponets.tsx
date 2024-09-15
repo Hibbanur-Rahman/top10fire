@@ -22,14 +22,15 @@ interface SliderComponentProps {
 const SliderComponent: React.FC<SliderComponentProps> = ({ items }) => {
   return (
     <Swiper
-      modules={[Autoplay, Pagination]}
+      modules={[Autoplay, Pagination,Navigation]}
       spaceBetween={50}
       slidesPerView={4}
       loop={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
+      navigation={true}
       pagination={{ clickable: true }}
       className="w-full overflow-hidden pb-16"
     >
@@ -51,7 +52,7 @@ const SliderComponent: React.FC<SliderComponentProps> = ({ items }) => {
                 <Image
                   src={item.img}
                   alt=""
-                  className="h-full w-full object-fill"
+                  className="h-full w-full object-fill aspect-video"
                 />
                 <div className="text-content absolute bottom-0 p-4">
                   <h1 className="font-bold text-xl md:text-2xl text-black group-hover/card:text-white relative z-10">

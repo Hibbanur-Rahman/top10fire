@@ -19,7 +19,7 @@ import {
 
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
-import logo from "@/assets/images/logo-1.png";
+import logo from "@/assets/images/logo-1.jpg";
 const Navbar = () => {
   const [active, setActive] = useState<string | null>(null);
   const navItems = [
